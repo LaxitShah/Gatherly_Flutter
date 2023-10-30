@@ -14,27 +14,27 @@ class OnBoardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding:const EdgeInsets.all(16.0),
+        padding:const EdgeInsets.all(20.0),
         color:model.bgColor,
         child:Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image(image: AssetImage(model.image),
-              height: model.height*0.5,
+              height: model.height*0.41,
 
             ),
             Column(
               children: [
                 Text(model.title,
                   style: TextStyle(
-                    fontSize: 30.0,
+                    fontSize: 32.0,
                     color: Colors.lightGreen, // Set the text color to black
                   ),
                 ),
                 SizedBox(height: 16),
                 Text(model.subTitle,
                   style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: 27.0,
                     color: Colors.lightGreenAccent, // Set the text color to black
 
                   ),
@@ -44,10 +44,11 @@ class OnBoardingPage extends StatelessWidget {
             Text(model.counterText,
               textAlign:TextAlign.right,
               style: TextStyle(
-                fontSize: 15.0,
+                fontSize: 25.0,
                 color: Colors.lightGreenAccent, // Set the text color to black
               ),
             ),
+            const SizedBox(height: 80.0),
           ],
         )
     );
