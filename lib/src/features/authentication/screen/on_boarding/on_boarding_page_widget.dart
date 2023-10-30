@@ -13,6 +13,8 @@ class OnBoardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size=MediaQuery.of(context).size;
+
     return Container(
         padding:const EdgeInsets.all(20.0),
         color:model.bgColor,
@@ -20,7 +22,7 @@ class OnBoardingPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image(image: AssetImage(model.image),
-              height: model.height*0.41,
+              height: size.height*0.41,
 
             ),
             Column(
