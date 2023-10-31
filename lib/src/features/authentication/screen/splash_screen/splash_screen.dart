@@ -1,4 +1,5 @@
 import 'package:f1/src/constants/colors.dart';
+import 'package:f1/src/features/authentication/screen/on_boarding/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:f1/src/constants/image_string.dart';
 import 'package:f1/src/constants/sizes.dart';
@@ -103,6 +104,6 @@ class _SplashScreenState extends State<SplashScreen> {
       animate = true;
     });
     await Future.delayed(Duration(milliseconds: 5000));
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>  OnBoardingScreen()));
   }
 }

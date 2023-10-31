@@ -30,14 +30,14 @@ class OnBoardingPage extends StatelessWidget {
                 Text(model.title,
                   style: TextStyle(
                     fontSize: 32.0,
-                    color: Colors.lightGreen, // Set the text color to black
+                    color: Colors.black26, // Set the text color to black
                   ),
                 ),
                 SizedBox(height: 16),
                 Text(model.subTitle,
                   style: TextStyle(
                     fontSize: 27.0,
-                    color: Colors.lightGreenAccent, // Set the text color to black
+                    color: Colors.black45, // Set the text color to black
 
                   ),
                 ),
@@ -47,7 +47,7 @@ class OnBoardingPage extends StatelessWidget {
               textAlign:TextAlign.right,
               style: TextStyle(
                 fontSize: 25.0,
-                color: Colors.lightGreenAccent, // Set the text color to black
+                color: Colors.black, // Set the text color to black
               ),
             ),
             const SizedBox(height: 80.0),
