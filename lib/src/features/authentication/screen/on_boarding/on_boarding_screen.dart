@@ -2,6 +2,7 @@ import 'package:f1/src/constants/image_string.dart';
 import 'package:f1/src/constants/text_strings.dart';
 import 'package:f1/src/features/authentication/models/model_on_boarding.dart';
 import 'package:f1/src/features/authentication/screen/on_boarding/on_boarding_page_widget.dart';
+import 'package:f1/src/features/authentication/screen/welcome/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
@@ -36,7 +37,18 @@ class OnBoardingScreen extends StatelessWidget
           Positioned(
             bottom:60,
             child:OutlinedButton(
-              onPressed: ()=>obController.animateToNextSlide(),
+              onPressed: () {
+                if (obController.currentPage.value == 2) {
+                  // Navigate to the welcome screen after the third page.
+                  Navigator.of(context).pushReplacement(
+                    MaterialPageRoute(
+                      builder: (context) => WelcomeScreen(), // Replace with your WelcomeScreen widget.
+                    ),
+                  );
+                } else {
+                  obController.animateToNextSlide();
+                }
+              },
               style: ElevatedButton.styleFrom(
                 side:const BorderSide(color: Colors.black26),
                 shape:const CircleBorder(),
