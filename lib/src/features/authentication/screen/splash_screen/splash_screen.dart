@@ -1,4 +1,5 @@
 import 'package:f1/src/constants/colors.dart';
+import 'package:f1/src/features/authentication/screen/on_boarding/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:f1/src/constants/image_string.dart';
 import 'package:f1/src/constants/sizes.dart';
@@ -15,6 +16,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   bool animate = false;
 
+
   @override
   void initState() {
     startAnimation();
@@ -23,10 +25,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     double tagLinePosition = animate ? 0 : -300; // Initial position (left of the screen)
+    var mediaQuery= MediaQuery.of(context);
+    // var height = mediaQuery.size.height;
+    var brightness= mediaQuery.platformBrightness;
+    final isDarkMode = brightness == Brightness.dark;
 
     return Theme(
       data: ThemeData(
-        scaffoldBackgroundColor: APrimaryColor,
+        scaffoldBackgroundColor: isDarkMode ? APrimaryColor1 : APrimaryColor,
         textTheme: TextTheme(
           headlineMedium: TextStyle(
             fontSize: 44.0,
@@ -103,6 +109,6 @@ class _SplashScreenState extends State<SplashScreen> {
       animate = true;
     });
     await Future.delayed(Duration(milliseconds: 5000));
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const WelcomeScreen()));
+    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>  OnBoardingScreen()));
   }
 }

@@ -5,3 +5,8 @@ const String ASplashImage= 'assets/images/logo.png';
 const String AOnBoardingPage1Image= 'assets/images/onboarding1.png';
 const String AOnBoardingPage2Image= 'assets/images/onboarding2.png';
 const String AOnBoardingPage3Image= 'assets/images/onboarding3.png';
+
+
+//welcome screen image
+
+const String AWelcomeScreenImage='assets/images/welcome_screen_image.png';

@@ -1,3 +1,5 @@
+import 'package:f1/src/utils/theme/widget_theme/elevated_button_theme.dart';
+import 'package:f1/src/utils/theme/widget_theme/outlined_button_theme.dart';
 import 'package:f1/src/utils/theme/widget_theme/text_theme.dart';
 import 'package:flutter/material.dart';
 class AThemeData{
@@ -12,18 +14,15 @@ class AThemeData{
     brightness: Brightness.light,
 
     textTheme:ATextTheme.lightTheme,
-
-    elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ElevatedButton.styleFrom()
-    ),
-
-
-    // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    outlinedButtonTheme: AOutlinedThemeData.lightOutlinedButtonTheme,
+    elevatedButtonTheme: AElevatedButtonTheme.lightElevatedButtonTheme,
     // useMaterial3: true,
   );
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
-    textTheme:ATextTheme.darkTheme
+    textTheme:ATextTheme.darkTheme,
+      outlinedButtonTheme: AOutlinedThemeData.darkOutlinedButtonTheme,
+      elevatedButtonTheme:AElevatedButtonTheme.darkElevatedButtonTheme,
   );
   static ThemeMode themeMode = ThemeMode.system;
 }
