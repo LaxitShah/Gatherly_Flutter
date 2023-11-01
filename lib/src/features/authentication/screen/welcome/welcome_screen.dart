@@ -1,3 +1,4 @@
+import 'package:f1/src/constants/colors.dart';
 import 'package:f1/src/constants/image_string.dart';
 import 'package:f1/src/constants/sizes.dart';
 import 'package:f1/src/constants/text_strings.dart';
@@ -13,12 +14,14 @@ class WelcomeScreen extends StatelessWidget {
     final textColor = currentTheme.brightness == Brightness.dark
         ? Colors.white // Use white text for dark theme
         : Colors.black; // Use black text for light theme
-    var height = MediaQuery
-        .of(context)
-        .size
-        .height;
+
+    var mediaQuery= MediaQuery.of(context);
+    var height = mediaQuery.size.height;
+    var brightness= mediaQuery.platformBrightness;
+    final isDarkMode = brightness == Brightness.dark;
 
     return Scaffold(
+      backgroundColor: isDarkMode ? Colors.black : APrimaryColor,
       body: Container(
         padding: EdgeInsets.all(ADefaultSize),
         child: Column(
@@ -54,9 +57,12 @@ class WelcomeScreen extends StatelessWidget {
                     child: Text(ALogin.toUpperCase()),
                   ),
                 ),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Text(ASignUp.toUpperCase()),
+                const SizedBox(width:10),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(ASignUp.toUpperCase()),
+                  ),
                 ),
               ],
             )
