@@ -10,3 +10,8 @@ const String AOnBoardingPage3Image= 'assets/images/onboarding3.png';
 //welcome screen image
 
 const String AWelcomeScreenImage='assets/images/welcome_screen_image.png';
+
+
+//login page
+const String ALoginScreenImage='assets/images/login_image.png';
+const String AGoogleLogoImage='assets/images/google_icon.png';

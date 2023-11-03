@@ -20,6 +20,5 @@ class FadeInAnimationController extends  GetxController{ // Correctly extends Ge
   {
     await Future.delayed(Duration(milliseconds: 500));
     animate.value = true;
-
   }
 }

@@ -27,3 +27,19 @@ const String AOnBoardingCounter3="3/3";
 //welcome screen text
 const String AWelcomeScreenTitle="Welcome to Gatherly";
 const String AWelcomeScreenSubTitle="Get Ready to Plan, Execute, and Celebrate";
+
+
+//Login Screen Text
+
+const String ALoginTitle="Welcome Back";
+const String ALoginSubTitle="Where every event is a masterpiece";
+const String ARememberMe="Remember Me";
+const String AForgetPassword="Forget Password?";
+const String aEmail="E-Mail";
+const String aPassword="Password";
+const String aOr="OR";
+const String aLoginWithGoogle="Login with Google ";
+const String aAlreadyHaveAnAccount="Already have an account?";
+const String aDontHaveAnAccount="Don't have an account?";
+// const String
+
